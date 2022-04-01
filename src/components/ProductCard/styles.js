@@ -14,13 +14,13 @@ const ProductCardStyles = styled.div`
   }
 `;
 
-const ProductPrice = styled.p`
+const ProductCardPrice = styled.p`
   font-size: 2.25rem;
   font-weight: 700;
   text-align: right;
 `;
 
-const ProductImage = styled.div`
+const ProductCardImage = styled.div`
   width: 100%;
 
   img {
@@ -32,17 +32,17 @@ const ProductImage = styled.div`
   }
 `;
 
-const ProductName = styled.h2`
+const ProductCardName = styled.h2`
   margin-top: 1rem;
 `;
 
-const ProductAgeGroup = styled.p`
+const ProductCardAgeGroup = styled.p`
   font-size: 1.125rem;
 `;
 
-const ProductDescription = styled.p`
+const ProductCardDescription = styled.p`
   font-size: 0.875rem;
   margin-top: 1rem;
 `;
 
-export { ProductCardStyles, ProductPrice, ProductName, ProductAgeGroup, ProductDescription, ProductImage };
+export { ProductCardStyles, ProductCardPrice, ProductCardName, ProductCardAgeGroup, ProductCardDescription, ProductCardImage };

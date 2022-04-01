@@ -6,6 +6,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "libs/firebase";
 
 import { PanelCardsContainer, PanelStyles, PanelTitle, PanelTitleBar } from "./styles";
+import { AddProduct } from "components/products/widgets/AddProduct";
 
 function AddNewToyPanel({ title, ...props }) {
   const [isUser, setIsUser] = useState(false);
@@ -29,7 +30,9 @@ function AddNewToyPanel({ title, ...props }) {
           <PanelTitleBar>
             <PanelTitle>{title || "Panel Title"}</PanelTitle>
           </PanelTitleBar>
-          <PanelCardsContainer>{/* Add Product Cards here */}</PanelCardsContainer>
+          <PanelCardsContainer>
+            <AddProduct />
+          </PanelCardsContainer>
         </PanelStyles>
       </>
     );

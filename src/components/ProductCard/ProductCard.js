@@ -1,18 +1,20 @@
 import React from "react";
 
-import { ProductAgeGroup, ProductCardStyles, ProductDescription, ProductImage, ProductName, ProductPrice } from "./styles";
+import { ProductCardAgeGroup, ProductCardStyles, ProductCardDescription, ProductCardImage, ProductCardName, ProductCardPrice } from "./styles";
 import placeholderImage from "static/images/toys/toy-1.webp";
 
 function ProductCard({ children, ...props }) {
   return (
     <ProductCardStyles {...props}>
-      <ProductPrice>$9.99</ProductPrice>
-      <ProductImage>
+      <ProductCardPrice>$9.99</ProductCardPrice>
+      <ProductCardImage>
         <img src={placeholderImage} alt="Toy placeholder" />
-      </ProductImage>
-      <ProductName>Toy Name</ProductName>
-      <ProductAgeGroup>5 - 7 year olds</ProductAgeGroup>
-      <ProductDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et libero faucibus, pharetra quam sit amet, molestie tortor. Maecenas eu euismod ipsum.</ProductDescription>
+      </ProductCardImage>
+      <ProductCardName>Toy Name</ProductCardName>
+      <ProductCardAgeGroup>5 - 7 year olds</ProductCardAgeGroup>
+      <ProductCardDescription>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et libero faucibus, pharetra quam sit amet, molestie tortor. Maecenas eu euismod ipsum.
+      </ProductCardDescription>
     </ProductCardStyles>
   );
 }
