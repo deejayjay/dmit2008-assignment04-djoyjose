@@ -2,4 +2,4 @@
 
 | Author          | Version | Last Modified On |
 | --------------- | ------- | ---------------- |
-| Deepak Joy Jose | 1.0.0   | 01/Apr/2022      |
+| Deepak Joy Jose | 1.0.1   | 01/Apr/2022      |
