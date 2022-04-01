@@ -3,11 +3,14 @@ import { useDropzone } from "react-dropzone";
 import { ProductImageDropBoxStyles } from "./styles";
 
 function ProductImageDropBox({ setProductImage, ...props }) {
-  const onDrop = useCallback((acceptedFiles) => {
-    const path = acceptedFiles[0];
+  const onDrop = useCallback(
+    (acceptedFiles) => {
+      const path = acceptedFiles[0];
 
-    setProductImage(URL.createObjectURL(path));
-  }, []);
+      setProductImage(URL.createObjectURL(path));
+    },
+    [setProductImage]
+  );
   const {
     getRootProps,
     getInputProps,
