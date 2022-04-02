@@ -21,6 +21,13 @@ const ProductDataEntryFormStyles = styled.form`
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
+
+  button {
+    :hover {
+      background-color: rgba(100, 166, 78, 0.9);
+      cursor: pointer;
+    }
+  }
 `;
 
 const ProductImage = styled.div``;

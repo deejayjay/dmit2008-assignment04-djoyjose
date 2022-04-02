@@ -4,10 +4,11 @@ import { ProductDataEntryFormStyles, ProductDescription, ProductImage, ProductNa
 import { Label, Input } from "ui/forms";
 import { ProductImageDropBox } from "../ProductImageDropBox";
 import { TextArea } from "ui/forms/textarea";
+import { SubmitButton } from "ui/buttons";
 
-function ProductDataEntryForm({ children, setProductImage, handleProductName, handleProductPrice, handleProductDescription, ...props }) {
+function ProductDataEntryForm({ children, setProductImage, handleProductName, handleProductPrice, handleProductDescription, handleSubmit, ...props }) {
   return (
-    <ProductDataEntryFormStyles {...props}>
+    <ProductDataEntryFormStyles {...props} onSubmit={handleSubmit}>
       <ProductImage>
         <Label>Product Image</Label>
         <ProductImageDropBox setProductImage={setProductImage} />
@@ -27,8 +28,14 @@ function ProductDataEntryForm({ children, setProductImage, handleProductName, ha
 
       <ProductDescription>
         <Label>Product Description</Label>
-        <TextArea rows={6} onChange={(e) => handleProductDescription(e.target.value.trim())} />
+        <TextArea rows={6} maxLength={200} onChange={(e) => handleProductDescription(e.target.value.trim())} />
       </ProductDescription>
+
+      <div>
+        <SubmitButton width="100%" bgcolor="#64a64e" padding="0.75rem 0" margin="1.125rem 0 0 0" type="submit">
+          Add Product
+        </SubmitButton>
+      </div>
     </ProductDataEntryFormStyles>
   );
 }
