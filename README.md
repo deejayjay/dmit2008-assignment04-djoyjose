@@ -2,4 +2,11 @@
 
 | Author          | Version | Last Modified On |
 | --------------- | ------- | ---------------- |
-| Deepak Joy Jose | 1.0.1   | 01/Apr/2022      |
+| Deepak Joy Jose | 1.0.2   | 05/Apr/2022      |
+
+This repository contains the solution for Writing and Reading to the firebase real time database from a react app.
+The technologies used in this solution include:
+
+- React
+- HTML
+- CSS & Scss
