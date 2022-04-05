@@ -7,10 +7,25 @@ const ProductCardStyles = styled.div`
   padding: 1.5rem;
   font-family: "Open Sans", sans-serif;
   color: #5a5a5a;
+  position: relative;
+  background-color: #efefef;
 
   h2 {
     font-size: 1.5rem;
     font-weight: 700;
+  }
+
+  & > i {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &:hover > i {
+    visibility: visible;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

@@ -17,18 +17,18 @@ function ProductDataEntryForm({ children, setProductImage, handleProductName, ha
       <fieldset>
         <ProductName>
           <Label>Product Name</Label>
-          <Input maxLength={30} onChange={(e) => handleProductName(e.target.value.trim())} />
+          <Input maxLength={30} onChange={(e) => handleProductName(e.target.value.trim())} required />
         </ProductName>
 
         <ProductPrice>
           <Label>Product Price</Label>
-          <Input maxLength={6} onChange={(e) => handleProductPrice(e.target.value.trim())} />
+          <Input maxLength={6} onChange={(e) => handleProductPrice(e.target.value.trim())} required />
         </ProductPrice>
       </fieldset>
 
       <ProductDescription>
         <Label>Product Description</Label>
-        <TextArea rows={6} maxLength={200} onChange={(e) => handleProductDescription(e.target.value.trim())} />
+        <TextArea rows={6} maxLength={200} onChange={(e) => handleProductDescription(e.target.value.trim())} required />
       </ProductDescription>
 
       <div>

@@ -1,20 +1,19 @@
 import React from "react";
+import { FaIcon } from "ui/FaIcon";
 
-import { ProductCardAgeGroup, ProductCardStyles, ProductCardDescription, ProductCardImage, ProductCardName, ProductCardPrice } from "./styles";
-import placeholderImage from "static/images/toys/toy-1.webp";
+import { ProductCardStyles, ProductCardDescription, ProductCardImage, ProductCardName, ProductCardPrice } from "./styles";
 
-function ProductCard({ children, ...props }) {
+function ProductCard({ children, product, ...props }) {
   return (
     <ProductCardStyles {...props}>
-      <ProductCardPrice>$9.99</ProductCardPrice>
+      <FaIcon className="fas fa-edit" size="1.25rem" />
+      <FaIcon className="fas fa-trash" size="1.25rem" margin="0 0 0 2rem" color="#c13f3f;" />
+      <ProductCardPrice>${product.productPrice}</ProductCardPrice>
       <ProductCardImage>
-        <img src={placeholderImage} alt="Toy placeholder" />
+        <img src={product.imageUrl} alt={product.productName} />
       </ProductCardImage>
-      <ProductCardName>Toy Name</ProductCardName>
-      <ProductCardAgeGroup>5 - 7 year olds</ProductCardAgeGroup>
-      <ProductCardDescription>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et libero faucibus, pharetra quam sit amet, molestie tortor. Maecenas eu euismod ipsum.
-      </ProductCardDescription>
+      <ProductCardName>{product.productName}</ProductCardName>
+      <ProductCardDescription>{product.productDescription}</ProductCardDescription>
     </ProductCardStyles>
   );
 }
