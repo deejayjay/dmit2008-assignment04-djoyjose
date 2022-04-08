@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const EditorFeedBackStyles = styled.aside`
+  grid-column: 1 / -1;
   width: 80%;
   margin: 4rem auto 0;
   text-align: center;
